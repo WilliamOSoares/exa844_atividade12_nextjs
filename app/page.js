@@ -9,7 +9,7 @@ function SearchBar({ filterText, onFilterTextChange }) {
     <form>
       <p>Procure uma mensagem:</p>
       <input
-        style="width:100%"
+        style={{width:"100%"}}
         type="text"
         value={filterText}
         placeholder="Search..."
