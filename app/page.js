@@ -14,7 +14,7 @@ const PRODUCTS = [
 function ProductCategoryRow({ category }) {
   return (
     <tr>
-      <th colSpan="2">{category}</th>
+      <td colSpan="2">{category}</td>
     </tr>
   );
 }
@@ -37,21 +37,27 @@ function ProductRow({ product }) {
 function SearchBar({ filterText, inStockOnly, onFilterTextChange, onInStockOnlyChange }) {
   return (
     <form>
-      <input
-        type="text"
-        value={filterText}
-        placeholder="Search..."
-        onChange={(e) => onFilterTextChange(e.target.value)}
-      />
-      <label>
-        <input
-          type="checkbox"
-          value={inStockOnly}
-          onChange={(e) => onInStockOnlyChange(e.target.checked)}
-        />
-        {' '}
-        Only show products in stock
-      </label>
+      <tr>
+        <td>
+          <input
+            type="text"
+            value={filterText}
+            placeholder="Search..."
+            onChange={(e) => onFilterTextChange(e.target.value)}
+          />
+        </td>
+        <td>
+          <label>
+            <input
+              type="checkbox"
+              value={inStockOnly}
+              onChange={(e) => onInStockOnlyChange(e.target.checked)}
+            />
+            {' '}
+            Only show products in stock
+          </label>
+        </td>
+      </tr>
     </form>
   );
 }
