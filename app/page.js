@@ -9,6 +9,7 @@ function SearchBar({ filterText, onFilterTextChange }) {
     <form>
       <p>Procure uma mensagem:</p>
       <input
+        style="width:100%"
         type="text"
         value={filterText}
         placeholder="Search..."
@@ -45,7 +46,7 @@ function FilterableMessageTable({ messages }) {
   return (
     <div>
       <SearchBar filterText={filterText} onFilterTextChange={setFilterText} />
-      <table border={1} frame="void" rules="rows">
+      <table>
         <thead>
           <tr>
             <th>Author</th>
